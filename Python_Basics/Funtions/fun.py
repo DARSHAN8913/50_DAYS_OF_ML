@@ -66,7 +66,7 @@
 # Extract INT values from given list of list and also from list
 
 # def test7(l):
-        
+
 #     l1=[]
 #     for i in l:
 #         if type(i)==int or type(i)==float:
@@ -80,6 +80,7 @@
 # l=[2,4,5,6,3,"fvf","vfv",[8,7,0,4]]
 # l2=test7(l)
 # print (l2)                                #  o/p: [2, 4, 5, 6, 3, 8, 7, 0, 4]
+
 
 
 
