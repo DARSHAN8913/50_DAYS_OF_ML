@@ -86,12 +86,18 @@
 #++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 # *args (called as static of args) is the tuple of n arguments (dynamical parameters)
-def asd(*args):
-    return args
+# def asd(*args):
+#     return args
 # print(type(asd()))                   # o/p: <class 'tuple'>
 
-#example:
-print(asd(1, 2, 3))                    # o/p: (1, 2, 3)
+# #example:
+# print(asd(1, 2, 3))                    # o/p: (1, 2, 3)
+
+# def asd2(*args,a):
+#     return args,a
+# print(asd2(1,5,6,7))    #o/p: TypeError: asd2() missing 1 required keyword-only argument: 'a'
+# print(asd2(1,6,2,a=10))          #o/p: ((1, 6, 2), 10)
+#here values (1,6,2) are considered as for args var and a has been passed as a=10
 
 
 
