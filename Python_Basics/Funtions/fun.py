@@ -49,4 +49,38 @@
 # print(sinc("hello"," everyone"))        #o/p: hello everyone  
 # print(sinc([1,2,3],[3,4,5]))                #o/p:  [1, 2, 3, 3, 4, 5]
 
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+#Extract INT values from given list 
+
+# def test7(l):
+#     l1=[]
+#     for i in l:
+#         if type(i)==int or type(i)==float:
+#               l1.append(i)
+#     return l1
+# l=[2,4,5,6,3,"fvf","vfv",[8,7,6,0,4]]
+# l2=test7(l)
+# print(l2)                                      #  o/p: [2, 4, 5, 6, 3]
+
+# Extract INT values from given list of list and also from list
+
+# def test7(l):
+        
+#     l1=[]
+#     for i in l:
+#         if type(i)==int or type(i)==float:
+#               l1.append(i)
+#         elif type(i)==list:
+#              for  j in i:
+#                   if type(j)==int or type(j)==float:
+#                      l1.append(j)
+                  
+#     return l1
+# l=[2,4,5,6,3,"fvf","vfv",[8,7,0,4]]
+# l2=test7(l)
+# print (l2)                                #  o/p: [2, 4, 5, 6, 3, 8, 7, 0, 4]
+
+
+
 
