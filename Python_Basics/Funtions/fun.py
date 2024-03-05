@@ -83,6 +83,17 @@
 # l2=test7(l)
 # print (l2)                                #  o/p: [2, 4, 5, 6, 3, 8, 7, 0, 4]
 
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+# *args (called as static of args) is the tuple of n arguments (dynamical parameters)
+def asd(*args):
+    return args
+# print(type(asd()))                   # o/p: <class 'tuple'>
+
+#example:
+print(asd(1, 2, 3))                    # o/p: (1, 2, 3)
+
+
 
 
 
