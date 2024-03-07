@@ -152,15 +152,15 @@
 #     print(i,end=" ")        #o/p: 0 1 1 2 3 5 8 13 21 34 
 
 #GENERATOR by using object creation:
-def fib():
-    a,b=0,1
-    while True:
-          yield a             
-          b,a=b+a,b          
+# def fib():
+#     a,b=0,1
+#     while True:
+#           yield a             
+#           b,a=b+a,b          
                               
-f=fib()                   #creating an iterator and using next function to traverse 
-for i in range(10):
-    print(next(f),end=" ")     #o/p: 0 1 1 2 3 5 8 13 21 34 
+# f=fib()                   #creating an iterator and using next function to traverse 
+# for i in range(10):
+#     print(next(f),end=" ")     #o/p: 0 1 1 2 3 5 8 13 21 34 
 
 # iter() function:
 
@@ -189,6 +189,58 @@ for i in range(10):
 # print(next(my_iterator, "End of List"))  # Output: 4
 # print(next(my_iterator, "End of List"))  # Output: 5
 # print(next(my_iterator, "End of List"))  # Output: "End of List"
+
+################################################################################################
+
+# lambda function:
+# def pow(a, b):
+#     return a**b            # a to the power of b
+# above function can also be wwritten using lambda function
+
+# c=lambda a,b:a**b        # also called anonymous function
+# print(c(3,2))             # o/p: 9
+
+# Q: finding max of 2 numbers:
+
+# fin_max = lambda x,y: x if x>y else y
+# print(fin_max(56,48))
+
+################################################################################################
+
+# Mapping:
+# map(func, *iterables) --> map object
+# Make an iterator that computes the function using arguments from each of the iterables.
+# or say maps the elements of iterables to the given function and return the o/p
+
+# def sq(h):                 # squaring function           
+#     return h**2
+# map(sq,[2,3,4,5,6,7,8,9])         #returns a map object 
+# print(list(map(sq,[2,3,4,5,6,7,8,9])))        #converting to list
+#                                            # o/p:[4, 9, 16, 25, 36, 49, 64, 81]
+def con(r1,r2):
+    return r1+r2
+# print(con([2,3,4],[1,1,1]))      #o/p: [2, 3, 4, 1, 1, 1]  
+
+# print(list(map(con,[2,3,4],[1,1,1])))  # o/p:[3, 4, 5]
+
+################################################################################################
+
+from functools import reduce
+# reduce() funciomn takes a function as 1st arg and a iterable as 2nd arg and returns the
+# reduced binary result
+#only 2 operand functions are allowed in reduction
+
+print(reduce(lambda x, y: x + y,[1,2,3,4]))
+# 1st iteration: x=1,y=2 then res=3       always previous return is taken as 1st operand
+# 2nd iteration: x=3,y=3 then res=6      i.e x=res
+# 3rd iteration: x=6,y=4 then res=10
+
+# filter() fun filters the output if the expression in a given funtion is true
+p1=[2,-5,1,8,6,3,0,-6,10]
+print("even filtering: ",list(filter(lambda x:x%2==0,p1)))
+print("-ve filtering: ",list(filter(lambda x:x<0,p1)))
+
+
 
 
 
