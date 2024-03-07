@@ -9,7 +9,7 @@ a.pr()          #o/P:this is class
 
 # passing data to the class
 class test1:
-    def __init__(self,ph_num,email,name):
+    def __init__(self,ph_num,email,name): 
         self.ph_num=ph_num                     
         self.email=email
         self.name=name
