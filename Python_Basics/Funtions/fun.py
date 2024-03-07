@@ -139,17 +139,33 @@
 # def fib(n):
 #     a,b=0,1
 #     for i in range(0,n):
-#         yield a
+#         yield a              # When the yield statement is encountered in the generator 
+#                              # function, the current state of the function is saved, and 
+#                              # the yielded value is returned to the caller. 
+#                              # The next time the generator is iterated over, execution
+#                              # resumes from where it was paused by the yield statement.
+
 #         b,a=b+a,b           #this type of assignment executes parelelly i.e even 
 #                             #even though we change b,a to a,b and respectively in RHS
 #                             #we get the same result
 # for i in fib(10):
-#     print(i,end=" ")
+#     print(i,end=" ")        #o/p: 0 1 1 2 3 5 8 13 21 34 
+
+#GENERATOR by using object creation:
+def fib():
+    a,b=0,1
+    while True:
+          yield a             
+          b,a=b+a,b          
+                              
+f=fib()                   #creating an iterator and using next function to traverse 
+for i in range(10):
+    print(next(f),end=" ")     #o/p: 0 1 1 2 3 5 8 13 21 34 
 
 # iter() function:
 
 # iter() is used to obtain an iterator from an iterable object.
-#  Iterators are used to iterate over a sequence of elements, such as a list, tuple,
+#  Iterators are used to iterate over a sequence of elements, such as a string, list, tuple,
 #  or other iterable objects.(also int and float are not supported)
 # Syntax: iterator = iter(iterable) 
 # next() function:
@@ -173,6 +189,7 @@
 # print(next(my_iterator, "End of List"))  # Output: 4
 # print(next(my_iterator, "End of List"))  # Output: 5
 # print(next(my_iterator, "End of List"))  # Output: "End of List"
+
 
 
 
