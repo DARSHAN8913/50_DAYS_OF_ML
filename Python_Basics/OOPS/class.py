@@ -11,11 +11,14 @@ a.pr()          #o/P:this is class
 class test1:
     def __init__(self,ph_num,email,name): 
         self.ph_num=ph_num                     
-        self.email=email
-        self.name=name
+        self.email=email 
+        self.name=name 
+
 
     def returning_data(self):
         return self.ph_num,self.email,self.name
+    
+    
 rh=test1(651616,"ksfnv@gmail.com","tyson")
 print(rh.returning_data())
 
