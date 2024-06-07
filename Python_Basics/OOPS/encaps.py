@@ -16,6 +16,7 @@ class car:
     
     def get_speed(self):
         return self.__speed
+    
 c=car(2006,"toyota","fortuner",120)
 c.__year=1000                                         
 print(c.__year)        # o/p: 1000
@@ -25,5 +26,4 @@ print(c._car__year)    # o/p: 2006 i.e if we use _class-name__attribute-name we 
                          # accesses the original attribute defined in the class. This demonstrates the 
                          # mangling behavior of Python to enforce some level of name privacy.
 c.set_speed(23)
-print(c.get_speed())   # o/p: 23
-
+print(c.get_speed())   # o/p: 23    
